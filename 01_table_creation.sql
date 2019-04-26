@@ -57,18 +57,18 @@ CREATE TABLE Track_Belongs_Playlist (
 	PlaylistID varchar(5) NOT NULL
 );
 
-ALTER TABLE Track ADD CONSTRAINT Track_fk0 FOREIGN KEY (AlbumID) REFERENCES Album(AlbumID);
+ALTER TABLE Track ADD CONSTRAINT Track_fk0 FOREIGN KEY (AlbumID) REFERENCES Album(AlbumID) ON DELETE CASCADE;
 
-ALTER TABLE Album ADD CONSTRAINT Album_fk0 FOREIGN KEY (Artist) REFERENCES Artist(Name);
+ALTER TABLE Album ADD CONSTRAINT Album_fk0 FOREIGN KEY (Artist) REFERENCES Artist(Name) ON DELETE CASCADE;
 
-ALTER TABLE Member_Buys_Album ADD CONSTRAINT Member_Buys_Album_fk0 FOREIGN KEY (MemberID) REFERENCES Member(MemberID);
+ALTER TABLE Member_Buys_Album ADD CONSTRAINT Member_Buys_Album_fk0 FOREIGN KEY (MemberID) REFERENCES Member(MemberID) ON DELETE CASCADE;
 
-ALTER TABLE Member_Buys_Album ADD CONSTRAINT Member_Buys_Album_fk1 FOREIGN KEY (AlbumID) REFERENCES Album(AlbumID);
+ALTER TABLE Member_Buys_Album ADD CONSTRAINT Member_Buys_Album_fk1 FOREIGN KEY (AlbumID) REFERENCES Album(AlbumID) ON DELETE CASCADE;
 
-ALTER TABLE Member_Buys_Track ADD CONSTRAINT Member_Buys_Track_fk0 FOREIGN KEY (MemberID) REFERENCES Member(MemberID);
+ALTER TABLE Member_Buys_Track ADD CONSTRAINT Member_Buys_Track_fk0 FOREIGN KEY (MemberID) REFERENCES Member(MemberID) ON DELETE CASCADE;
 
-ALTER TABLE Member_Buys_Track ADD CONSTRAINT Member_Buys_Track_fk1 FOREIGN KEY (TrackID) REFERENCES Track(TrackID);
+ALTER TABLE Member_Buys_Track ADD CONSTRAINT Member_Buys_Track_fk1 FOREIGN KEY (TrackID) REFERENCES Track(TrackID) ON DELETE CASCADE;
 
-ALTER TABLE Track_Belongs_Playlist ADD CONSTRAINT Track_Belongs_Playlist_fk0 FOREIGN KEY (TrackID) REFERENCES Track(TrackID);
+ALTER TABLE Track_Belongs_Playlist ADD CONSTRAINT Track_Belongs_Playlist_fk0 FOREIGN KEY (TrackID) REFERENCES Track(TrackID) ON DELETE CASCADE;
 
-ALTER TABLE Track_Belongs_Playlist ADD CONSTRAINT Track_Belongs_Playlist_fk1 FOREIGN KEY (PlaylistID) REFERENCES Playlist(PlaylistID);
+ALTER TABLE Track_Belongs_Playlist ADD CONSTRAINT Track_Belongs_Playlist_fk1 FOREIGN KEY (PlaylistID) REFERENCES Playlist(PlaylistID) ON DELETE CASCADE;
