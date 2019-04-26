@@ -24,7 +24,7 @@ insert into track values ('Ghost of Perdition', 'AL1', 'Metal', 250, 'T13');
 insert into member values('M1', 'password', 'Harry', 'James', 'Potter', '2015/12/03', false);
 insert into member values('M2', 'hermione', 'Ronald', 'Bilius', 'Weasley', '2015/11/13', true);
 insert into member values('M3', 'pureblood', 'Tom', 'Marvolo', 'Riddle', '1999/07/23', true);
-insert into member values('M2', 'deathstick', 'Albus', 'Percival', 'Dumbledore', '2010/01/03', false);
+insert into member values('M4', 'deathstick', 'Albus', 'Percival', 'Dumbledore', '2010/01/03', false);
 insert into member values('M5', 'prophecy', 'Albus', 'Severus', 'Potter', '2009/22/02', false);
 insert into member values('M6', 'ministry', 'Ginevra', 'Bilius', 'Weasley', '2015/12/03', false);
 
